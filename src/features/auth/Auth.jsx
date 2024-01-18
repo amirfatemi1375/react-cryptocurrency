@@ -1,9 +1,10 @@
+import Button from "../../components/button/Button";
 import InputWithLabel from "../../components/inputWithLabel/InputWithLabel";
 const Auth=()=>{
   return (
     <section className="bg-[#F4F7FF] py-20 lg:py-[120px]">
     <div className="container">
-       <div className="flex flex-wrap -mx-4">
+       
           <div className="w-full px-4">
              <div
                 className="
@@ -26,10 +27,15 @@ const Auth=()=>{
                   <InputWithLabel label="Password" type="password" id="pasword" />
 
                   </div>
+                  <div className="my-3 text-center">
+                      <Button primary  >
+                          Login
+                      </Button>
+                  </div>
 
     </div>
     </div>
-    </div>
+   
     </div>
     </section>
   )
