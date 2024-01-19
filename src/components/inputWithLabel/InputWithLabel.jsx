@@ -1,12 +1,9 @@
-const InputWithLabel=({label,id,value,type="text",onInputChange})=>{
-    const handleChange=(event)=>{
-        onInputChange(event)
-
-    }
+const InputWithLabel=({label,id,name,value,type="text",onInputChange})=>{
+  
   return(
      <>
      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor={id}>{label}</label>
-      <input className="
+      <input  className="
                         w-full
                         rounded-md
                         border
@@ -18,7 +15,13 @@ const InputWithLabel=({label,id,value,type="text",onInputChange})=>{
                         placeholder-[#ACB6BE]
                         outline-none
                         focus-visible:shadow-none
-                        focus:border-primary" type={type} id={id} onChange={handleChange} value={value}/>
+                        focus:border-primary" name={name} type={type} id={id} onChange={onInputChange} value={value}/>
+                           {
+                            
+      
+
+
+      }
      </>
   )
 }
