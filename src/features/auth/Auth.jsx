@@ -2,13 +2,17 @@ import Button from "../../components/Button/Button";
 import InputWithLabel from "../../components/InputWithLabel/InputWithLabel";
 import axiosInstance, { instance } from "../../services/Api";
 import useForm from "../../hooks/useForm/useForm";
+import { useNavigate } from "react-router-dom";
 const Auth=()=>{
   const { handleChange, values, errors } = useForm();
+  const navigate=useNavigate();
   const login=()=>{
     if(Object.keys(errors).length !== 0){
       return;
     }else{
-      axiosInstance.post("/auth",values)
+      axiosInstance.post("/auth",values);
+    navigate("/CryptoCurrency");
+
 
     }
     
